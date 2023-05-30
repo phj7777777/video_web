@@ -52,7 +52,7 @@ function Card({ onClick, title, imgSrc, href, date }) {
   return (
     <div
       className=" p-2 "
-      style={{ maxWidth: '544px', maxHeight: '200px' }}
+      style={{ minWidth: '180px', maxWidth: '544px', maxHeight: '200px' }}
       onClick={() => onClick(visibility)}
     >
       <div
@@ -66,7 +66,7 @@ function Card({ onClick, title, imgSrc, href, date }) {
               <Image
                 alt={title}
                 src={imgSrc}
-                className="object-cover object-center md:h-36 lg:h-48"
+                className="object-contain object-center md:h-36 lg:h-48"
                 width={544}
                 height={480}
               />
@@ -75,28 +75,11 @@ function Card({ onClick, title, imgSrc, href, date }) {
             <Image
               alt={title}
               src={imgSrc}
-              className="object-cover object-center md:h-36 lg:h-48"
+              className="object-contain object-center md:h-36 lg:h-48"
               width={544}
               height={480}
             />
           ))}
-        <div className="p-6">
-          <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-            {href ? (
-              <Link href={href} aria-label={`Link to ${title}`}>
-                {title}
-              </Link>
-            ) : (
-              title
-            )}
-          </h2>
-          <dl>
-            <dt className="sr-only">Published on</dt>
-            <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-              <time dateTime={date}>{formatDate(date)}</time>
-            </dd>
-          </dl>
-        </div>
       </div>
     </div>
   )

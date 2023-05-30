@@ -22,7 +22,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
 
   return (
     <>
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
+      <div className=" dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
@@ -52,15 +52,15 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </div>
         </div>
 
-        <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h3 className="pt-8 pb-4 text-3xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-10">
           Latest
-        </h2>
+        </h3>
 
         <Latest />
 
-        <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h3 className="pt-8 pb-4 text-3xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-10">
           Recently Popular
-        </h2>
+        </h3>
 
         <div className="container grid grid-cols-2">
           {projectsData.map((d) => (
@@ -70,13 +70,14 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               description={d.description}
               imgSrc={d.imgSrc}
               href={d.href}
+              date={d.date}
             />
           ))}
         </div>
 
-        <h2 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+        <h3 className="pt-8 pb-4 text-3xl font-bold leading-9 text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-10">
           Categories
-        </h2>
+        </h3>
 
         <div className="grid grid-cols-2">
           {projectsData.map((d) => (

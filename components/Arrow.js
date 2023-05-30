@@ -39,7 +39,7 @@ export function LeftArrow() {
 
   return (
     <Arrow disabled={disabled} onClick={() => scrollPrev()}>
-      Left
+      {'< '}
     </Arrow>
   )
 }
@@ -57,7 +57,7 @@ export function RightArrow() {
 
   return (
     <Arrow disabled={disabled} onClick={() => scrollNext()}>
-      Right
+      {' >'}
     </Arrow>
   )
 }

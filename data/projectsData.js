@@ -7,6 +7,7 @@ const projectsData = [
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
     date: '2018-08-15',
+    tags: ['next js', 'math', 'ols'],
   },
   {
     title: 'The Time Machine',
@@ -16,6 +17,7 @@ const projectsData = [
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
     date: '2018-08-15',
+    tags: ['next js', 'math', 'ols'],
   },
   {
     title: 'A Search Engine',
@@ -25,6 +27,7 @@ const projectsData = [
     imgSrc: '/static/images/google.png',
     href: 'https://www.google.com',
     date: '2018-08-15',
+    tags: ['next js', 'math', 'ols'],
   },
   {
     title: 'The Time Machine',
@@ -34,6 +37,7 @@ const projectsData = [
     imgSrc: '/static/images/time-machine.jpg',
     href: '/blog/the-time-machine',
     date: '2018-08-15',
+    tags: ['next js', 'math', 'ols'],
   },
 ]
 

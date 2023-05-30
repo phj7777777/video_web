@@ -7,6 +7,7 @@ import formatDate from '@/lib/utils/formatDate'
 
 import NewsletterForm from '@/components/NewsletterForm'
 import VidePlayer from '@/components/Video'
+import Blog from './blog'
 
 const MAX_DISPLAY = 5
 
@@ -17,6 +18,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
+  return <Blog />
+}
+
+export function Home2({ posts }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
