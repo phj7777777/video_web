@@ -3,6 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import generateRss from '@/lib/generate-rss'
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import VidePlayer from '@/components/Video'
 
 const DEFAULT_LAYOUT = 'PostLayout'
 
@@ -45,6 +46,7 @@ export default function Blog({ post, authorDetails, prev, next }) {
 
   return (
     <>
+      <VidePlayer />
       {frontMatter.draft !== true ? (
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}

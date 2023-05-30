@@ -1,9 +1,8 @@
 import Image from './Image'
 import Link from './Link'
-import formatDate from '@/lib/utils/formatDate'
 
-const Card = ({ title, description, imgSrc, href, date }) => (
-  <div className=" p-2 " style={{ maxWidth: '544px' }}>
+const CategoryCard = ({ title, imgSrc, href }) => (
+  <div className="p-2 " style={{ maxWidth: '544px' }}>
     <div
       className={`${
         imgSrc && 'h-full'
@@ -39,15 +38,9 @@ const Card = ({ title, description, imgSrc, href, date }) => (
             title
           )}
         </h2>
-        <dl>
-          <dt className="sr-only">Published on</dt>
-          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-            <time dateTime={date}>{formatDate(date)}</time>
-          </dd>
-        </dl>
       </div>
     </div>
   </div>
 )
 
-export default Card
+export default CategoryCard
