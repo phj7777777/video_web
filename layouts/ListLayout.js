@@ -8,6 +8,7 @@ import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import Latest from '@/components/Latest'
 import CategoryCard from '@/components/CategoryCard'
+import ProductsPage from '../pages/popular2'
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -62,7 +63,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           Recently Popular
         </h3>
 
-        <div className="container grid grid-cols-2">
+        <ProductsPage />
+
+        <div className="container grid grid-cols-4 sm:grid-cols-2">
           {projectsData.map((d) => (
             <Card
               key={d.title}
